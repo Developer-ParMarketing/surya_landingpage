@@ -1828,7 +1828,7 @@ figcaption {
     .banner img {
         height: 200px;
         object-fit: cover;
-        object-position: 72% center;
+        object-position: 70% center;
     }
 }
 
