@@ -70,6 +70,40 @@
     z-index: 2;
 }
 
+.field-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.4;
+}
+
+.field input[type="month"] {
+    width: 100%;
+    height: 56px;
+    min-height: 56px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.field input[type="month"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: .8;
+}
+
+@media (max-width:576px) {
+    .field-label {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+
+    .field input[type="month"] {
+        height: 52px;
+        min-height: 52px;
+    }
+}
+
 /* sections that host a watermark need a positioning
    context + clipped overflow so the mark doesn't
    spill into neighbouring sections */
