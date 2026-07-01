@@ -1787,10 +1787,6 @@ figcaption {
     }
 }
 
-/* ==========================
-   FULL WIDTH RESPONSIVE BANNER
-========================== */
-
 .banner {
     width: 100%;
     margin: 0;
@@ -1799,11 +1795,16 @@ figcaption {
     box-shadow: 0 15px 40px rgba(0, 0, 0, .12);
 }
 
+.banner picture,
 .banner img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+}
+
+.banner img {
     object-fit: cover;
+    object-position: center;
     transition: transform .6s ease;
 }
 
@@ -1811,30 +1812,95 @@ figcaption {
     transform: scale(1.03);
 }
 
-@media (max-width: 992px) {
+@media (max-width:992px) {
     .banner {
-        margin: 0;
         border-radius: 16px;
     }
 
     .banner img {
-        width: 100%;
         height: 200px;
         object-fit: cover;
-        object-position: left;
+        object-position: right center;
     }
 }
 
-@media (max-width: 576px) {
-    .banner {
-        margin: 0;
-        border-radius: 12px;
-    }
-
+@media (max-width:576px) {
     .banner img {
-        width: 100%;
         height: 200px;
         object-fit: cover;
-        object-position: left;
+        object-position: 72% center;
+    }
+}
+
+/* =================================
+   Desktop Arrow
+================================= */
+
+.desktop-arrow {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.desktop-arrow span {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ed3b6e;
+    white-space: nowrap;
+    animation: pulseArrowText 2s infinite;
+}
+
+.desktop-arrow svg {
+    width: 180px;
+    height: 60px;
+    overflow: visible;
+}
+
+.desktop-arrow path {
+    fill: none;
+    stroke: #ed3b6e;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 8;
+    animation: arrowMove 2s linear infinite;
+}
+
+.desktop-arrow polyline {
+    fill: none;
+    stroke: #ed3b6e;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+@keyframes arrowMove {
+    from {
+        stroke-dashoffset: 32;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes pulseArrowText {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .5;
+    }
+}
+
+/* Hide on tablet/mobile */
+
+@media (max-width:1020px) {
+    .desktop-arrow {
+        display: none;
     }
 }
