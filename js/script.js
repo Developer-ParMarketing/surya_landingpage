@@ -43,27 +43,3 @@ document.querySelectorAll(".tcard").forEach(card => {
     });
 
 });
-const edd = document.getElementById("edd");
-
-const monthNames = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-];
-
-const today = new Date();
-const currentMonth = today.getMonth();
-const currentYear = today.getFullYear();
-
-// Next 24 months
-for (let i = 0; i < 24; i++) {
-    const date = new Date(currentYear, currentMonth + i, 1);
-
-    const month = monthNames[date.getMonth()];
-    const year = date.getFullYear();
-
-    const option = document.createElement("option");
-    option.value = `${year}-${String(date.getMonth() + 1).padStart(2, "0")}`;
-    option.textContent = `${month} ${year}`;
-
-    edd.appendChild(option);
-}
