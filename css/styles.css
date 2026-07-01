@@ -51,14 +51,23 @@
 ========================================== */
 
 
+/* Decorative background images */
 .bg-item {
     position: absolute;
     pointer-events: none;
-    user-select: none;
+    opacity: .08;
+    /* adjust here */
     z-index: 0;
-    opacity: .09;
-    /* filter: grayscale(1); */
-    max-width: none;
+}
+
+.benefits {
+    position: relative;
+    overflow: hidden;
+}
+
+.benefits .benefits-content {
+    position: relative;
+    z-index: 2;
 }
 
 /* sections that host a watermark need a positioning
@@ -878,7 +887,11 @@ ul {
 
 .benefits {
     position: relative;
+    isolation: isolate;
+
     overflow: hidden;
+
+    /* NEW */
     max-width: 900px;
     margin: 40px auto;
     padding: 40px;
@@ -899,6 +912,11 @@ ul {
     height: 300px;
     border-radius: 50%;
     filter: blur(60px);
+
+    z-index: -1;
+    /* NEW */
+    pointer-events: none;
+    /* NEW */
 }
 
 .benefits::before {
