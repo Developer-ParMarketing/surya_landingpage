@@ -1826,7 +1826,7 @@ figcaption {
 
 @media (max-width:576px) {
     .banner img {
-        height: 220px;
+        height: 225px;
         object-fit: cover;
         object-position: 70% center;
     }
