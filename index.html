@@ -49,13 +49,15 @@
         </div>
     </header>
     <section class="banner">
-        <picture>
-            <!-- Mobile -->
-            <source media="(max-width: 576px)" srcset="assets/website1.jpg">
+        <a href="#lead-form" class="js-scroll">
+            <picture>
+                <!-- Mobile -->
+                <source media="(max-width: 576px)" srcset="assets/website1.jpg">
 
-            <!-- Tablet/Desktop -->
-            <img src="assets/website.jpg" alt="Surya Hospital Banner">
-        </picture>
+                <!-- Desktop -->
+                <img src="assets/website.jpg" alt="Surya Hospital Banner">
+            </picture>
+        </a>
     </section>
     <!-- ============ LAYOUT: content left, sticky form right ============ -->
     <div class="container layout">
@@ -86,7 +88,7 @@
                                 required />
                         </div>
                         <div class="field">
-                            <label for="edd" class="field-label">Expected Delivery Month</label>
+
                             <select id="edd" name="edd" required>
                                 <option value="">Select Expected Delivery Month</option>
                             </select>

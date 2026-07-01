@@ -797,6 +797,11 @@ ul {
 }
 
 @media (max-width: 576px) {
+    #why .btn {
+        display: block;
+        width: fit-content;
+        margin: 20px auto 0;
+    }
 
     .why-grid {
         gap: 16px;
@@ -1876,6 +1881,11 @@ figcaption {
 
 .banner:hover img {
     transform: scale(1.03);
+}
+
+.banner a {
+    display: block;
+    cursor: pointer;
 }
 
 @media (max-width:992px) {

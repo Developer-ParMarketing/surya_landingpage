@@ -43,3 +43,12 @@ document.querySelectorAll(".tcard").forEach(card => {
     });
 
 });
+
+document.querySelector('.banner a').addEventListener('click', function (e) {
+    e.preventDefault();
+
+    document.querySelector('#lead-form').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+});
