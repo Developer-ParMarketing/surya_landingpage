@@ -13,6 +13,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 
@@ -169,30 +171,69 @@
         <section class="block bg-host" id="why">
             <img src="assets/Surya Logo-05.png" class="bg-item bg-item-2" alt="" aria-hidden="true">
 
-            <p class="eyebrow">Why choose Surya Hospitals</p>
+
             <h2 class="section-title">More than a delivery — compassionate care for your maternity experience</h2>
 
             <div class="why-grid">
                 <div class="why-media">
-                    <img src="assets/website banner 3.jpg" alt="A mother holding her newborn at Surya Hospitals"
-                        onerror="if(!this.dataset.fb){this.dataset.fb=1;this.src='https://picsum.photos/seed/suryawhy/800/1000';}else{this.remove();}" />
-                    <div class="why-media__badge">
-                        <span class="why-media__big">40<span>+</span></span>
-                        <span class="why-media__cap">years caring for Mumbai's families</span>
+                    <div class="swiper whySwiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="assets/Surya Logo-03.png" alt="Surya Hospitals Maternity">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/website banner 3.jpg" alt="Mother and Baby">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/website banner 3.jpg" alt="Pregnancy Care">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/website banner 3.jpg" alt="Newborn Care">
+                            </div>
+
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="swiper-pagination why-pagination"></div>
                     </div>
+
+
                 </div>
                 <div class="why-copy">
                     <p class="prose">For over 40 years, Surya Hospitals has been trusted by families across Mumbai for
                         safe pregnancies, expert deliveries and compassionate maternity care.</p>
                     <p class="prose">From your first pregnancy consultation to welcoming your baby into the world —
-                        ranked India's #1 — our maternity and gynaecology team is by your side at every moment.</p>
-                    <ul class="checklist" role="list">
-                        <li>100,000+ successful deliveries</li>
-                        <li>40+ years of trusted care</li>
-                        <li>Experienced obstetricians &amp; gynaecologists</li>
-                        <li>Level IV NICU</li>
-                        <li>24×7 emergency maternity</li>
-                        <li>Mother &amp; baby care under one roof</li>
+                        ranked India's #1 — our maternity and gynaecologist care team is by your side at every moment.
+                    </p>
+                    <ul class="highlight-chips" role="list">
+                        <li class="chip chip--pink">
+                            <span class="chip__icon">✓</span>
+                            100,000+ successful deliveries
+                        </li>
+                        <li class="chip chip--blue">
+                            <span class="chip__icon">✓</span>
+                            40+ years of trusted maternity care
+                        </li>
+                        <li class="chip chip--pink">
+                            <span class="chip__icon">✓</span>
+                            Experienced obstetricians &amp; gynaecologists
+                        </li>
+                        <li class="chip chip--blue">
+                            <span class="chip__icon">✓</span>
+                            Level IV NICU
+                        </li>
+                        <li class="chip chip--pink">
+                            <span class="chip__icon">✓</span>
+                            24×7 emergency maternity
+                        </li>
+                        <li class="chip chip--blue">
+                            <span class="chip__icon">✓</span>
+                            Mother &amp; baby care under one roof
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -201,74 +242,105 @@
 
         <!-- SERVICES -->
         <section class="block" id="services">
-            <p class="eyebrow">Maternity services</p>
             <h2 class="section-title">Everything you need during your unique pregnancy journey</h2>
 
-            <div class="services-grid">
-                <article class="service-card">
-                    <span class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.6">
+            <div class="services-list">
+                <article class="service-row">
+                    <!-- <span class="service-row__index">01</span> -->
+                    <span class="service-row__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
                             <path
                                 d="M12 21s-7-4.35-9.33-9.4C1.1 8.1 3 4.5 6.5 4.5 8.7 4.5 10 6 12 8c2-2 3.3-3.5 5.5-3.5 3.5 0 5.4 3.6 3.83 7.1C19 16.65 12 21 12 21z" />
-                        </svg></span>
-                    <h3>Antenatal care</h3>
-                    <p>Regular pregnancy check-ups, advanced scans, nutritional counselling and fetal monitoring.</p>
+                        </svg>
+                    </span>
+                    <div class="service-row__body">
+                        <h3>Antenatal care</h3>
+                        <p>Regular pregnancy check-ups, advanced scans, nutritional counselling and fetal monitoring.
+                        </p>
+                    </div>
                 </article>
-                <article class="service-card">
-                    <span class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.6">
+
+                <article class="service-row">
+                    <!-- <span class="service-row__index">02</span> -->
+                    <span class="service-row__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
                             <circle cx="12" cy="8" r="3.2" />
                             <path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6" />
-                        </svg></span>
-                    <h3>Normal delivery</h3>
-                    <p>Supporting natural childbirth in a safe, comfortable and medically supervised environment.</p>
+                        </svg>
+                    </span>
+                    <div class="service-row__body">
+                        <h3>Normal delivery</h3>
+                        <p>Supporting natural childbirth in a safe, comfortable and medically supervised environment.
+                        </p>
+                    </div>
                 </article>
-                <article class="service-card">
-                    <span class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.6">
+
+                <article class="service-row">
+                    <!-- <span class="service-row__index">03</span> -->
+                    <span class="service-row__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
                             <path
                                 d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8" />
-                        </svg></span>
-                    <h3>Painless delivery</h3>
-                    <p>Modern pain-management techniques including epidural support for a more comfortable birth.</p>
+                        </svg>
+                    </span>
+                    <div class="service-row__body">
+                        <h3>Painless delivery</h3>
+                        <p>Modern pain management techniques including epidural support for a more comfortable birth
+                            experience.</p>
+                    </div>
                 </article>
-                <article class="service-card">
-                    <span class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.6">
+
+                <article class="service-row">
+                    <!-- <span class="service-row__index">04</span> -->
+                    <span class="service-row__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
                             <path d="M12 3l8 4v5c0 4.4-3.4 7.7-8 9-4.6-1.3-8-4.6-8-9V7l8-4z" />
                             <path d="M9.5 12l1.8 1.8 3.2-3.6" />
-                        </svg></span>
-                    <h3>High-risk pregnancy care</h3>
-                    <p>Comprehensive care for pregnancies needing specialised maternal, fetal monitoring and Level IV
-                        NICU.</p>
+                        </svg>
+                    </span>
+                    <div class="service-row__body">
+                        <h3>High-risk pregnancy care</h3>
+                        <p>Comprehensive care for pregnancies requiring specialised maternal, fetal monitoring and LEVEL
+                            IV NICU.</p>
+                    </div>
                 </article>
-                <article class="service-card">
-                    <span class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.6">
+
+                <article class="service-row">
+                    <!-- <span class="service-row__index">05</span> -->
+                    <span class="service-row__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
                             <rect x="4" y="4" width="16" height="16" rx="3" />
                             <path d="M9 12h6M12 9v6" />
-                        </svg></span>
-                    <h3>Caesarean delivery (C-section)</h3>
-                    <p>Safe surgical deliveries supported by experienced OB-GYN and neonatal specialists.</p>
+                        </svg>
+                    </span>
+                    <div class="service-row__body">
+                        <h3>Caesarean delivery (C-section)</h3>
+                        <p>Safe surgical deliveries supported by experienced OB-GYN and neonatal specialists.</p>
+                    </div>
                 </article>
-                <article class="service-card">
-                    <span class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.6">
+
+                <article class="service-row">
+                    <!-- <span class="service-row__index">06</span> -->
+                    <span class="service-row__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
                             <path d="M7 13a5 5 0 0110 0v3a3 3 0 01-3 3h-4a3 3 0 01-3-3v-3z" />
                             <path d="M9 13V8a3 3 0 016 0v5" />
-                        </svg></span>
-                    <h3>Postnatal care</h3>
-                    <p>Recovery support, breastfeeding &amp; lactation guidance, newborn care and maternal wellness.</p>
+                        </svg>
+                    </span>
+                    <div class="service-row__body">
+                        <h3>Postnatal care</h3>
+                        <p>Recovery support, breastfeeding &amp; lactation guidance, newborn care and maternal wellness.
+                        </p>
+                    </div>
                 </article>
             </div>
         </section>
-
         <!-- BENEFITS -->
         <section class="benefits" id="benefits">
             <img src="assets/Surya Logo-05.png" class="bg-item bg-item-3" alt="" aria-hidden="true">
-            <p class="eyebrow eyebrow--light">Exclusive package benefits</p>
+
             <h2 class="section-title section-title--light">Book early. Receive more.</h2>
-            <p class="benefits__worth">Complimentary benefits worth <strong>₹20,000*</strong></p>
+            <p class="benefits__worth">Benefits worth <strong>₹20,000*</strong></p>
 
             <table class="benefits__table">
                 <thead>
@@ -299,7 +371,7 @@
                 </tfoot>
             </table>
             <div class="benefits-total">
-                <span class="offer-tag">🎁 Complimentary Benefits</span>
+                <span class="offer-tag"> Benefits</span>
 
                 <h2>₹20,000<span>*</span></h2>
 
@@ -311,6 +383,7 @@
                 <li>Upgrade available from Deluxe Room onwards</li>
                 <li>Room upgrade subject to availability</li>
                 <li>Limited period offer</li>
+                <li>Book your maternity package today to avail these exclusive benefits.</li>
             </ul>
             <a href="#lead-form" class="btn btn--primary js-scroll"
                 style="display:block;width:fit-content;margin:0 auto;">
@@ -333,129 +406,161 @@
             <!-- decorative watermark #4 — slightly darker -->
             <img src="assets/Surya Logo-04.png" class="bg-item bg-item-4" alt="" aria-hidden="true">
 
-            <p class="eyebrow">Patient testimonials</p>
+
             <h2 class="section-title">
                 Thousands of families have started their journey with us
             </h2>
 
-            <div class="tcards">
+            <div class="swiper testimonialSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <!-- Card 1 -->
+                        <article class="tcard">
+                            <div class="tcard__stars">★★★★★</div>
 
-                <!-- Card 1 -->
-                <article class="tcard">
-                    <div class="tcard__stars">★★★★★</div>
+                            <blockquote class="testimonial-text">
+                                Recently I underwent a Hysteroscopy and polyp removal surgical procedure at Surya
+                                Hospital, Santacruz, which was done by Dr. Ami R Surti. Her knowledge, expertise,
+                                patient centric approach, capacity to handle complicated procedures and personal
+                                attention to detail is highly commendable. Also her post surgery care and personal
+                                follow up with assurance was a key to my quick recovery.
 
-                    <blockquote class="testimonial-text">
-                        Recently I underwent a Hysteroscopy and polyp removal surgical procedure at Surya
-                        Hospital, Santacruz, which was done by Dr. Ami R Surti. Her knowledge, expertise,
-                        patient centric approach, capacity to handle complicated procedures and personal
-                        attention to detail is highly commendable. Also her post surgery care and personal
-                        follow up with assurance was a key to my quick recovery.
+                                Also all the facilities at Surya Hospital including the para medics was of excellent
+                                quality and service. Thanks Dr. Surti Mam and Surya Hospital.
+                            </blockquote>
 
-                        Also all the facilities at Surya Hospital including the para medics was of excellent
-                        quality and service. Thanks Dr. Surti Mam and Surya Hospital.
-                    </blockquote>
+                            <button class="read-more-btn">Read More</button>
 
-                    <button class="read-more-btn">Read More</button>
+                            <figcaption>
+                                <span class="tcard__avatar">♥</span>
+                                Monali Mahajan
+                            </figcaption>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- Card 2 -->
+                        <article class="tcard">
+                            <div class="tcard__stars">★★★★★</div>
 
-                    <figcaption>
-                        <span class="tcard__avatar">♥</span>
-                        Monali Mahajan
-                    </figcaption>
-                </article>
+                            <blockquote class="testimonial-text">
+                                Our daughter is turning 13 this year, and Dr. Sonal Saste has been caring for her since
+                                birth.
+                                Over the years, she has become much more than just our pediatrician. She has an
+                                incredible
+                                ability to understand my daughter from the moment she walks into the room.
 
-                <!-- Card 2 -->
-                <article class="tcard">
-                    <div class="tcard__stars">★★★★★</div>
+                                Her diagnostic acumen and clinical judgment are outstanding, but what truly sets her
+                                apart
+                                is
+                                the comfort and confidence she gives parents. No matter how anxious or overwhelmed we
+                                feel,
+                                we
+                                always leave her clinic reassured and hopeful.
 
-                    <blockquote class="testimonial-text">
-                        Our daughter is turning 13 this year, and Dr. Sonal Saste has been caring for her since birth.
-                        Over the years, she has become much more than just our pediatrician. She has an incredible
-                        ability to understand my daughter from the moment she walks into the room.
+                                Thank you, Dr. Saste, for treating our daughter with such kindness, patience, and
+                                genuine
+                                affection. Knowing she is in your care gives us immense peace of mind. We are deeply
+                                grateful
+                                for everything you do.
 
-                        Her diagnostic acumen and clinical judgment are outstanding, but what truly sets her apart is
-                        the comfort and confidence she gives parents. No matter how anxious or overwhelmed we feel, we
-                        always leave her clinic reassured and hopeful.
+                                You are, and always will be, our favorite doctor. ❤️
+                            </blockquote>
+                            <button class="read-more-btn">Read More</button>
+                            <figcaption>
+                                <span class="tcard__avatar">♥</span>
+                                trupti Kotian
+                            </figcaption>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- Card 3 -->
+                        <article class="tcard">
+                            <div class="tcard__stars">★★★★★</div>
 
-                        Thank you, Dr. Saste, for treating our daughter with such kindness, patience, and genuine
-                        affection. Knowing she is in your care gives us immense peace of mind. We are deeply grateful
-                        for everything you do.
+                            <blockquote class="testimonial-text">
+                                We are incredibly grateful to Dr Ami Surti for safely bringing our baby into this
+                                world.
 
-                        You are, and always will be, our favorite doctor. ❤️
-                    </blockquote>
-                    <button class="read-more-btn">Read More</button>
-                    <figcaption>
-                        <span class="tcard__avatar">♥</span>
-                        trupti Kotian
-                    </figcaption>
-                </article>
+                                Throughout our entire journey, she was exceptionally caring, dedicated, and always
+                                available whenever we needed her, regardless of the time. Her promptness, humility,
+                                and sense of responsibility gave us immense confidence and comfort.
 
-                <!-- Card 3 -->
-                <article class="tcard">
-                    <div class="tcard__stars">★★★★★</div>
+                                She is not only an outstanding gynaecologist but also a genuinely compassionate
+                                human being who supports her patients every step of the way. Her expertise in the
+                                operation theatre and her calm, reassuring approach made one of the most important
+                                moments of our lives feel safe and positive.
 
-                    <blockquote class="testimonial-text">
-                        We are incredibly grateful to Dr Ami Surti for safely bringing our baby into this
-                        world.
+                                We would also like to sincerely appreciate Surya Hospital for its excellent
+                                facilities, outstanding hygiene standards, and warm hospitality. The nursing staff,
+                                support teams, and overall hospital management were courteous, attentive, and highly
+                                professional. The comfortable environment and quality of care made our stay
+                                extremely pleasant and stress-free during such an important phase of our lives.
 
-                        Throughout our entire journey, she was exceptionally caring, dedicated, and always
-                        available whenever we needed her, regardless of the time. Her promptness, humility,
-                        and sense of responsibility gave us immense confidence and comfort.
+                                Thank you to Dr Ami Surti and the entire team at Surya Hospital for making our
+                                journey to parenthood so special. We wholeheartedly recommend them to anyone
+                                seeking exceptional maternity care.
+                            </blockquote>
 
-                        She is not only an outstanding gynaecologist but also a genuinely compassionate
-                        human being who supports her patients every step of the way. Her expertise in the
-                        operation theatre and her calm, reassuring approach made one of the most important
-                        moments of our lives feel safe and positive.
+                            <button class="read-more-btn">Read More</button>
 
-                        We would also like to sincerely appreciate Surya Hospital for its excellent
-                        facilities, outstanding hygiene standards, and warm hospitality. The nursing staff,
-                        support teams, and overall hospital management were courteous, attentive, and highly
-                        professional. The comfortable environment and quality of care made our stay
-                        extremely pleasant and stress-free during such an important phase of our lives.
+                            <figcaption>
+                                <span class="tcard__avatar">♥</span>
+                                Shesha Purav Parekh
+                            </figcaption>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="tcard">
+                            <div class="tcard__stars">★★★★★</div>
 
-                        Thank you to Dr Ami Surti and the entire team at Surya Hospital for making our
-                        journey to parenthood so special. We wholeheartedly recommend them to anyone
-                        seeking exceptional maternity care.
-                    </blockquote>
+                            <blockquote class="testimonial-text">
+                                The service, doctors, and overall care at the hospital are truly exceptional. However, I
+                                would
+                                especially like to acknowledge the often-unsung heroes who work tirelessly behind the
+                                scenes
+                                and
+                                play a crucial role in supporting patients and their families during challenging times —
+                                the
+                                TPA
+                                & Billing team.
 
-                    <button class="read-more-btn">Read More</button>
+                                I would like to extend my sincere appreciation to Kalpita Ma'am for her outstanding
+                                support
+                                and
+                                kindness. Despite her working hours having ended, she took the time to understand my
+                                situation
+                                and the long distance I had traveled. She went above and beyond her responsibilities by
+                                accepting and processing my pre-approval claim form, ensuring that there was no delay in
+                                the
+                                process.
 
-                    <figcaption>
-                        <span class="tcard__avatar">♥</span>
-                        Shesha Purav Parekh
-                    </figcaption>
-                </article>
+                                Her professionalism, empathy, and willingness to help made a significant difference
+                                during a
+                                stressful time. Employees like Kalpita Ma'am are a true asset to any healthcare
+                                institution
+                                and
+                                exemplify what patient-centric service should look like.
 
+                                Thank you, Kalpita Ma'am, for your dedication and commitment. Please continue the
+                                excellent
+                                work—you have my deepest gratitude and respect.
+                            </blockquote>
 
-                <article class="tcard">
-                    <div class="tcard__stars">★★★★★</div>
+                            <button class="read-more-btn">Read More</button>
 
-                    <blockquote class="testimonial-text">
-                        The service, doctors, and overall care at the hospital are truly exceptional. However, I would
-                        especially like to acknowledge the often-unsung heroes who work tirelessly behind the scenes and
-                        play a crucial role in supporting patients and their families during challenging times — the TPA
-                        & Billing team.
+                            <figcaption>
+                                <span class="tcard__avatar">♥</span>
+                                Arvind Ramanarayanan
+                            </figcaption>
+                        </article>
+                    </div>
+                </div>
 
-                        I would like to extend my sincere appreciation to Kalpita Ma'am for her outstanding support and
-                        kindness. Despite her working hours having ended, she took the time to understand my situation
-                        and the long distance I had traveled. She went above and beyond her responsibilities by
-                        accepting and processing my pre-approval claim form, ensuring that there was no delay in the
-                        process.
-
-                        Her professionalism, empathy, and willingness to help made a significant difference during a
-                        stressful time. Employees like Kalpita Ma'am are a true asset to any healthcare institution and
-                        exemplify what patient-centric service should look like.
-
-                        Thank you, Kalpita Ma'am, for your dedication and commitment. Please continue the excellent
-                        work—you have my deepest gratitude and respect.
-                    </blockquote>
-
-                    <button class="read-more-btn">Read More</button>
-
-                    <figcaption>
-                        <span class="tcard__avatar">♥</span>
-                        Arvind Ramanarayanan
-                    </figcaption>
-                </article>
+                <div class="testimonial-nav">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
             </div>
         </section>
 
@@ -464,8 +569,8 @@
             <!-- decorative watermark #3 -->
             <img src="assets/Surya Logo-05.png" class="bg-item bg-item-3" alt="" aria-hidden="true">
 
-            <p class="eyebrow eyebrow--light">Our promise</p>
-            <h2 class="section-title section-title--light">Every pregnancy is unique. So is our care.</h2>
+
+            <h2 class="section-title section-title--light">Every pregnancy is unique. <br> So is our care.</h2>
             <p class="promise__text">
                 Whether you're planning your first delivery or growing your family, we combine medical
                 excellence with compassionate care to make every step of your maternity journey
@@ -490,7 +595,7 @@
 
         <!-- FAQ -->
         <section class="block" id="faq">
-            <p class="eyebrow">Frequently asked questions</p>
+
             <h2 class="section-title">Good to know before you book</h2>
 
             <div class="faq-list">
@@ -536,18 +641,68 @@
     <!-- ============ FOOTER ============ -->
     <footer class="footer">
         <div class="container footer__inner">
-            <a href="#top" class="footer__logo-link" aria-label="Surya Hospitals home">
-                <img src="assets/Surya Logo-02.png" alt="Surya Hospitals" class="footer__logo"
-                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-                <span class="brand__fallback brand__fallback--footer"
-                    aria-hidden="true">SURYA<small>HOSPITALS</small></span>
-            </a>
-            <p class="footer__disclaimer">
-                Benefits are part of a limited-period offer, subject to terms &amp; conditions. Room upgrade subject to
-                availability.
-            </p>
-            <p class="footer__copy">© <span id="year"></span> Surya Hospitals. All rights reserved.</p>
+
+            <!-- Left -->
+            <div class="footer__left">
+
+                <a href="#top" class="footer__logo-link" aria-label="Surya Hospitals home">
+                    <img src="assets/footerlogo.png" alt="Surya Hospitals" class="footer__logo"
+                        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+                    <span class="brand__fallback brand__fallback--footer"
+                        aria-hidden="true">SURYA<small>HOSPITALS</small></span>
+                </a>
+
+                <h4 class="footer__title">Connect With Us</h4>
+
+                <div class="footer__social">
+
+                    <a href="https://www.facebook.com/suryahospitalsindia/" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="https://twitter.com/SuryaHospitals" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/suryahospitals/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.youtube.com/channel/UCd4zax49Ge9KECO48XyruVA" target="_blank"
+                        aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Right -->
+            <div class="footer__right">
+
+                <h3>Your Trusted Partner in Women's & Children's Healthcare</h3>
+
+                <p class="footer__disclaimer">
+                    Leaders in care and pioneers in innovation. For over four decades,
+                    Surya Hospitals has been delivering exceptional maternity, neonatal,
+                    paediatric and women's healthcare with compassion, expertise and
+                    advanced medical technology.
+
+                    From pregnancy to childbirth and beyond, we are committed to ensuring
+                    every mother and child receives the highest standard of care in a
+                    safe and comfortable environment.
+                </p>
+
+            </div>
+
         </div>
+
+        <div class="footer__bottom">
+            <div class="container">
+                <p>© <span id="year"></span> Surya Hospitals. All rights reserved.</p>
+            </div>
+        </div>
+
     </footer>
 
     <!-- ============ MOBILE BOTTOM BAR ============ -->
@@ -576,6 +731,7 @@
     </nav>
 
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 <script>
     const edd = document.getElementById("edd");
@@ -602,6 +758,56 @@
 
         edd.appendChild(option);
     }
+
+
+    const swiper = new Swiper(".testimonialSwiper", {
+        loop: true,
+        spaceBetween: 30,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 1,
+            },
+            1200: {
+                slidesPerView: 1,
+            },
+        },
+        on: {
+            init: function () { refreshReadMoreButtons(); },
+            slideChangeTransitionEnd: function () { refreshReadMoreButtons(); },
+        },
+    });
+
+    const whySwiper = new Swiper(".whySwiper", {
+        loop: true,
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true
+        },
+        speed: 1000,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".why-pagination",
+            clickable: true,
+        },
+    });
 </script>
 
 </html>

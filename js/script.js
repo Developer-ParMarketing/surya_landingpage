@@ -17,38 +17,74 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    var bannerLink = document.querySelector('.banner a');
+    if (bannerLink) {
+        bannerLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            var target = document.querySelector('#lead-form');
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    }
 });
 
-document.querySelectorAll(".tcard").forEach(card => {
+/* ----------------------------------------------------------------
+   Testimonial "Read More" — Swiper (loop:true) clones every slide
+   into extra DOM nodes. Those clones share the same classes as the
+   originals but are separate elements, so a listener bound once at
+   load never reaches them. Event delegation on the swiper container
+   fixes that: one listener catches clicks from originals and clones
+   alike, and refreshReadMoreButtons() re-checks clamping whenever
+   Swiper creates new clones (after init and on resize).
+------------------------------------------------------------------- */
+function refreshReadMoreButtons() {
+    document.querySelectorAll('.testimonialSwiper .tcard').forEach(function (card) {
+        var text = card.querySelector('.testimonial-text');
+        var btn = card.querySelector('.read-more-btn');
+        if (!text || !btn) return;
 
-    const text = card.querySelector(".testimonial-text");
-    const btn = card.querySelector(".read-more-btn");
+        // Skip cards already expanded by the user
+        if (text.classList.contains('expanded')) return;
 
+        var isClamped = text.scrollHeight > text.clientHeight + 2;
+        btn.style.display = isClamped ? '' : 'none';
+    });
+}
+
+document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.read-more-btn');
     if (!btn) return;
 
-    // Hide button for short testimonials
-    if (text.scrollHeight <= text.clientHeight + 5) {
-        btn.style.display = "none";
-        return;
-    }
+    var card = btn.closest('.tcard');
+    var text = card && card.querySelector('.testimonial-text');
+    if (!text) return;
 
-    btn.addEventListener("click", () => {
-
-        text.classList.toggle("expanded");
-
-        btn.textContent = text.classList.contains("expanded")
-            ? "Read Less"
-            : "Read More";
-
-    });
-
+    text.classList.toggle('expanded');
+    btn.textContent = text.classList.contains('expanded') ? 'Read Less' : 'Read More';
 });
 
-document.querySelector('.banner a').addEventListener('click', function (e) {
-    e.preventDefault();
+window.addEventListener('load', refreshReadMoreButtons);
+window.addEventListener('resize', function () {
+    clearTimeout(window.__ttReadMoreResize);
+    window.__ttReadMoreResize = setTimeout(refreshReadMoreButtons, 150);
+});
 
-    document.querySelector('#lead-form').scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+/* Swiper init lives in index.html (needs the Swiper library loaded
+   first). It calls refreshReadMoreButtons() itself once slides
+   (including loop clones) exist in the DOM. */
+
+
+/* FAQ Accordion - Only one open at a time */
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach((item) => {
+    item.addEventListener("toggle", function () {
+        if (this.open) {
+            faqItems.forEach((otherItem) => {
+                if (otherItem !== this) {
+                    otherItem.open = false;
+                }
+            });
+        }
     });
 });
