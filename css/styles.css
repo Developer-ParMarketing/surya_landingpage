@@ -1687,7 +1687,8 @@ figcaption {
     }
 
     .journey img {
-        object-position: center;
+        object-position: 85% center;
+
     }
 
     .journey::before {
